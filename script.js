@@ -186,7 +186,13 @@ function updateTotal()
 
  //  Show message to customer
 document.getElementById('buy').addEventListener('click',()=>{
-      alert("Your are ordered ");
+      var totalOrder = "";
+      const cartItems = document.querySelectorAll('.cart-box');
+      cartItems.forEach((product)=>{
+        const title = product.querySelector('.cart-food-title').innerHTML;
+        totalOrder+=title+"\n";
+      });
+      alert("Your have been ordered \n"+totalOrder+"\n Have a Nice Day \n Thank you");
 });
 function findRate(val){
   
