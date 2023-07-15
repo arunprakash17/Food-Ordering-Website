@@ -4,9 +4,11 @@
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+  outline: 0;
   cursor: pointer;
   user-select: none;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body{
@@ -64,7 +66,11 @@ header{
 #cart-icon{
   font-size: 1.5rem;
   cursor: pointer;
+  outline:none;
   padding-top: 10px;
+}
+#cart-icon:focus{
+    outline: none !important;
 }
 
 img{
@@ -109,6 +115,9 @@ img{
     outline:none;
     border:none;
     height:55px;
+}
+.input-btn:focus{
+    outline:none !important;
 }
 .input-btn:active{
     background-color: rgb(21, 4, 114);
@@ -341,7 +350,8 @@ transform: scale(1.5);
     }
     .input-btn{
         height:45px;
-        background-color:green;
+        background-color: red;
+        font-size: 13px;
     }
     .shop-content{
         grid-template-columns:repeat(auto-fit,minmax(170px,280px));
