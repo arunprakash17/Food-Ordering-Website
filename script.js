@@ -192,6 +192,10 @@ document.getElementById('buy').addEventListener('click',()=>{
         const title = product.querySelector('.cart-food-title').innerHTML;
         totalOrder+=title+"\n";
       });
+      if(totalOrder.length==0){
+        alert("You didn't order anything right now");
+        return;
+      }
       alert("Your have been ordered \n"+totalOrder+"\n Have a Nice Day \n Thank you");
 });
 function findRate(val){
